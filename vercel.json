@@ -7,15 +7,14 @@
             "config": { "distDir": "build" }
         },
         {
-            "src": "./public/server.js",
-            "use": "@vercel/node",
-            "config": { "distDir": "server" }
+            "src": "./build/server.js",
+            "use": "@vercel/node"
         }
     ],
-    "routes": [
+    "rewrites": [
         {
-            "src": "/(.*)",
-            "dest": "server.js"
+            "source": "/(.*)",
+            "destination": "server.js"
         }
     ]
 }
