@@ -88,7 +88,7 @@ export default function CheckoutForm({clientEmail}) {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: `/paymentComplete`,
+        return_url: `https://master--clinquant-fenglisu-3c11fc.netlify.app/paymentComplete`,
         receipt_email: email,
       },
     });
