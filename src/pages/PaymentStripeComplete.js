@@ -74,7 +74,7 @@ const PaymentStripeComplete = () => {
   const data = localStorage.getItem("ClientOrderData");
 
   const parsedData = JSON.parse(data);
-  parsedData.TraditionalPaymentNumber = "Paid with Stripe, check your account";
+  parsedData?.TraditionalPaymentNumber = "Paid with Stripe, check your account";
 
   const ClientData = parsedData;
 
