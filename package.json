@@ -39,11 +39,10 @@
     "start-server": "node ./public/server.js",
     "start-mailer": "node ./public/mailer.js",
     "start-serverBank": "node ./src/components/paymentMethods/bankServer.js",
-    "normal_start": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start": "concurrently \"yarn start-client\" \"yarn start-server\""
+    "eject": "react-scripts eject"
   },
   "homepage": ".",
   "proxy": "http://localhost:4242",
