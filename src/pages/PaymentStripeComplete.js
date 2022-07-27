@@ -62,7 +62,7 @@ const PaymentConfirmPage = styled.div`
 	}
 `;
 
-const PaymentStripeComplete = async () => {
+const PaymentStripeComplete = () => {
 	const arr = window.location.href.split("&");
 	const test = /redirect_status/;
 	const status = arr.filter((el) => {
@@ -73,9 +73,9 @@ const PaymentStripeComplete = async () => {
 	const paymentStatus = status[0].split("=")[1];
 	const data = localStorage.getItem("ClientOrderData");
 
-	const parsedData = await JSON.parse(data);
+	const parsedData = JSON.parse(data);
 
-	const ClientData = await parsedData;
+	const ClientData = parsedData;
 	ClientData.TraditionalPaymentNumber = "Paid with Stripe, check your account";
 
 	useEffect(() => {
